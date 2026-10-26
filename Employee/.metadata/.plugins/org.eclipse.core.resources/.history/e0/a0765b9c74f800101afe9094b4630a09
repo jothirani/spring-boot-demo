@@ -1,0 +1,25 @@
+package com.example.demo;
+
+
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+@SpringBootApplication
+@ImportResource("classpath:bean.xml")
+public class Mobile {
+    @SuppressWarnings("resource")
+	public static void main(String[] args) {
+        
+        // Using ApplicationContext tom implement Spring IoC
+        ApplicationContext applicationContextw
+        = new ClassPathXmlApplicationContext("beans.xml");
+        
+        // Get the bean
+        Sim sim = applicationContextw.getBean("sim", Sim.class);
+        
+        // Calling the methods
+        sim.calling();
+        sim.data();
+    }
+}

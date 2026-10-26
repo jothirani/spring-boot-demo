@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"m":"Java8Features","l":"com.eample.lamexp"}];updateSearchResults();

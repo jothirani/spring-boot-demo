@@ -1,0 +1,26 @@
+package com.example.demo;
+
+
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class Mobile {
+
+	//@SuppressWarnings("resource")
+	public static void main(String[] args) {
+	//	SpringApplication.run(Mobile.class, args);
+        
+        // Using ApplicationContext tom implement Spring IoC
+//@SuppressWarnings("resource")
+ApplicationContext applic= new ClassPathXmlApplicationContext("applicationcontext/some.xml");
+        
+        // Get the bean
+        Sim sim = applic.getBean("sim", Sim.class);
+        
+        // Calling the methods
+        sim.calling();
+        sim.data();
+    }
+	
+}
